@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="SCAYLORE mark">
+  <title>SCAYLORE</title>
+  <desc>Stylized S as two horizontal rounded bars with a small orange square.</desc>
+  <defs>
+    <filter id="cyan-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="0 0 0 0 0.12
+                0 0 0 0 0.85
+                0 0 0 0 0.95
+                0 0 0 0.85 0" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#cyan-glow)">
+    <rect x="38" y="68" width="148" height="44" rx="22" fill="#F7FEFE"/>
+    <rect x="38" y="144" width="148" height="44" rx="22" fill="#F7FEFE"/>
+    <rect x="198" y="68" width="24" height="24" rx="3" fill="#FD6A45"/>
+  </g>
+</svg>
