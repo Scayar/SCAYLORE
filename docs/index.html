@@ -27,11 +27,11 @@
     <style>
       :root {
         --night: #0b1220;
-        --ink: #05070c;
-        --paper: #f7fbff;
+        --ink: #000004;
+        --paper: #f4ffff;
         --mute: #9bb0c4;
-        --signal: #4dc9ff;
-        --ember: #f96a02;
+        --signal: #12d6e8;
+        --ember: #f85720;
         --card: #121a28;
       }
       * {
@@ -55,25 +55,19 @@
         margin-inline: auto;
       }
       header {
-        padding: 40px 0 16px;
+        padding: 40px 0 8px;
         text-align: center;
       }
-      .mark {
-        width: 88px;
-        height: 88px;
-        border-radius: 22px;
+      .lockup {
+        width: min(420px, 100%);
+        height: auto;
       }
       h1 {
-        font-family: Outfit, sans-serif;
-        font-weight: 700;
-        letter-spacing: 0.18em;
-        font-size: clamp(1.6rem, 4vw, 2.4rem);
-        margin: 18px 0 8px;
-      }
-      .tag {
-        color: var(--mute);
-        margin: 0;
-        font-size: 1.05rem;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
       }
       .hero {
         width: 100%;
@@ -108,6 +102,13 @@
         border: 1px solid #1d2a3c;
         border-radius: 14px;
         padding: 16px 18px;
+      }
+      article img {
+        width: 100%;
+        border-radius: 10px;
+        display: block;
+        margin-bottom: 12px;
+        background: #000004;
       }
       article h3 {
         font-family: Outfit, sans-serif;
@@ -146,9 +147,14 @@
   </head>
   <body>
     <header>
-      <img class="mark" src="brand/logo-mark-tight.png" alt="SCAYLORE mark" width="88" height="88" />
+      <img
+        class="lockup"
+        src="brand/lockup.png"
+        alt="SCAYLORE — two horizontal rounded bars, orange square, wordmark, Fresh sources. Lasting memory."
+        width="420"
+        height="237"
+      />
       <h1>SCAYLORE</h1>
-      <p class="tag">Fresh sources. Lasting memory.</p>
     </header>
     <main>
       <img
@@ -167,42 +173,49 @@
       <h2>Meet the crew</h2>
       <div class="crew">
         <article>
-          <div class="role">Communicator</div>
+          <img src="brand/crew/echo.png" alt="Echo waving with three chat bubbles" width="280" height="360" />
+          <div class="role">Communicator · chatty / wave</div>
           <h3>Echo</h3>
           <p>
-            Antennae with blue tips, a wave, three chat tiles already in the air.
-            Echo brings fresh signals and conversations into the system.
+            Hand already up. Three bubbles in the air. Echo catches the sentence
+            that would otherwise vanish and walks it into the system while it is
+            still alive.
           </p>
         </article>
         <article>
-          <div class="role">Memory archivist</div>
+          <img src="brand/crew/shelf.png" alt="Shelf holding a careful stack of slabs" width="280" height="360" />
+          <div class="role">Memory archivist · careful stack</div>
           <h3>Shelf</h3>
           <p>
-            A stack of three glowing slabs. Shelf organizes and stacks lasting
-            memory so it can be found again.
+            Both hands on the stack. Shelf does not chase. Shelf orders — layers
+            you can still find next month.
           </p>
         </article>
         <article>
-          <div class="role">Core guardian</div>
+          <img src="brand/crew/lore.png" alt="Lore holding the calm core cube" width="280" height="360" />
+          <div class="role">Core guardian · calm core</div>
           <h3>Lore</h3>
           <p>
-            Center. Eyes closed, a cube holding the S-mark. Lore is the living
-            lore — the lasting memory core.
+            Eyes closed. A cube holding the two-bar mark. Lore is the living
+            lore — the quiet middle everything else is meant to reach.
           </p>
         </article>
         <article>
-          <div class="role">Source hunter</div>
+          <img src="brand/crew/scout.png" alt="Scout seeking with a magnifying glass" width="280" height="360" />
+          <div class="role">Source hunter · curious seek</div>
           <h3>Scout</h3>
           <p>
-            Magnifying glass, wide curious eyes. Scout finds and validates fresh
-            sources.
+            Magnifying glass, wide eyes. Scout finds and checks. Fresh is not
+            the same as true.
           </p>
         </article>
         <article>
-          <div class="role">Linker</div>
+          <img src="brand/crew/knot.png" alt="Knot winking with a chain-link tile" width="280" height="360" />
+          <div class="role">Linker · wink / link</div>
           <h3>Knot</h3>
           <p>
-            A wink and a chain. Knot connects sources, memory, and people.
+            A wink and a chain. Knot connects sources, memory, and people —
+            the click that says this belongs with that.
           </p>
         </article>
       </div>
@@ -210,7 +223,8 @@
       <p class="note">
         Brand files live in
         <a href="https://github.com/Scayar/SCAYLORE">the SCAYLORE repository</a>.
-        Run <code>python3 scripts/check-brand.py</code> to verify them.
+        The mark, lockup, and portraits are crops of the hero. Run
+        <code>python3 scripts/check-brand.py</code> to verify them.
       </p>
     </main>
     <footer>Made by Scayar · Fresh sources. Lasting memory.</footer>

@@ -10,11 +10,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 BRAND = ROOT / "docs" / "brand"
 README = ROOT / "README.md"
+INDEX = ROOT / "docs" / "index.html"
 
 REQUIRED = [
     "scaylore-heroes.png",
     "logo-mark.png",
     "logo-mark.svg",
+    "logo-mark-crop.png",
     "lockup.png",
     "og.png",
     "favicon.ico",
@@ -23,9 +25,9 @@ REQUIRED = [
 ]
 
 CREW = ["Echo", "Shelf", "Lore", "Scout", "Knot"]
+CREW_FILES = ["echo.png", "shelf.png", "lore.png", "scout.png", "knot.png"]
 TAGLINE = "Fresh sources. Lasting memory."
 
-# Fake-metric phrases that must not appear as claimed stats.
 FORBIDDEN = [
     "k stars",
     "m downloads",
@@ -68,10 +70,35 @@ def main() -> int:
                 errors.append(f"README.md crew order: {name} appears before the previous member")
             else:
                 last = idx
+            portrait = f"docs/brand/crew/{name.lower()}.png"
+            if portrait not in text:
+                errors.append(f"README.md missing crew portrait {portrait}")
+        if "docs/brand/lockup.png" not in text:
+            errors.append("README.md must use the hero lockup crop")
         lowered = text.lower()
         for phrase in FORBIDDEN:
             if phrase in lowered:
                 errors.append(f"README.md contains forbidden metric phrasing: {phrase!r}")
+
+    if INDEX.exists():
+        html = INDEX.read_text(encoding="utf-8")
+        if "logo-mark-tight.png" in html:
+            errors.append("docs/index.html still references removed logo-mark-tight.png")
+        if "brand/lockup.png" not in html and "brand/logo-mark.png" not in html:
+            errors.append("docs/index.html must use the hero mark or lockup crop")
+        for fname in CREW_FILES:
+            if f"crew/{fname}" not in html:
+                errors.append(f"docs/index.html missing crew portrait crew/{fname}")
+        if TAGLINE not in html:
+            errors.append("docs/index.html missing tagline")
+
+    svg = BRAND / "logo-mark.svg"
+    if svg.exists():
+        svg_text = svg.read_text(encoding="utf-8")
+        if svg_text.count("<rect") < 3:
+            errors.append("logo-mark.svg should draw two bars plus the orange square")
+        if "letter S" in svg_text.lower() and "never" not in svg_text.lower():
+            errors.append("logo-mark.svg describes a letter-S substitute")
 
     for name in REQUIRED:
         path = BRAND / name
@@ -85,6 +112,19 @@ def main() -> int:
                 png_size(path)
             except SystemExit as exc:
                 errors.append(str(exc))
+
+    crew_dir = BRAND / "crew"
+    for fname in CREW_FILES:
+        path = crew_dir / fname
+        if not path.exists():
+            errors.append(f"missing {path.relative_to(ROOT)}")
+            continue
+        if path.stat().st_size < 200:
+            errors.append(f"{path.name} is empty")
+        try:
+            png_size(path)
+        except SystemExit as exc:
+            errors.append(str(exc))
 
     heroes = BRAND / "scaylore-heroes.png"
     if heroes.exists():
@@ -106,6 +146,10 @@ def main() -> int:
         w, h = png_size(mark)
         if abs(w - h) > 8:
             errors.append(f"logo-mark.png should be square, got {w}x{h}")
+
+    src = BRAND / "_src" / "scaylore-heroes.png"
+    if not src.exists():
+        errors.append("missing docs/brand/_src/scaylore-heroes.png (source hero)")
 
     if errors:
         print("brand check failed:")

@@ -1,33 +1,36 @@
 # SCAYLORE brand kit
 
-Canonical files for the SCAYLORE identity. The mark is a stylized **S**: two rounded horizontal bars plus a small orange square at the top-right. Do not invent a different logo.
+Canonical files for the SCAYLORE identity. **PNG lockup, mark, favicon, OG, and crew portraits are cropped from** `scaylore-heroes.png` / `_src/scaylore-heroes.png`. Do not replace them with a redrawn letter S.
+
+The mark is two rounded horizontal bars plus a small orange square at the top-right of the upper bar.
 
 ## Files
 
 | File | Size / notes |
 | --- | --- |
-| `scaylore-heroes.png` | Official crew hero. Left → right: **Echo**, **Shelf**, **Lore**, **Scout**, **Knot**. |
-| `lockup.png` | Hero crop: mark + wordmark + tagline. |
-| `logo-mark.png` | Isolated mark on the brand dark. |
-| `logo-mark-tight.png` | Tighter crop of the same mark (favicon source). |
-| `logo-mark.svg` | Vector reconstruction of the same mark. Prefer the PNG when the glow matters. |
-| `og.png` | 1280×640 social preview. |
-| `favicon.ico` / `favicon-32.png` / `favicon-16.png` | Favicons. |
+| `_src/scaylore-heroes.png` | Source hero. Rebuild rasters with `python3 scripts/build_brand_assets.py`. |
+| `scaylore-heroes.png` | Same hero, public path. Left → right: **Echo**, **Shelf**, **Lore**, **Scout**, **Knot**. |
+| `lockup.png` | Hero crop: two-bar mark + wordmark + tagline. |
+| `logo-mark.png` | Isolated mark on the brand dark (padded crop). |
+| `logo-mark-crop.png` | Tight crop of the same mark. |
+| `logo-mark.svg` | Vector companion of the two-bar geometry. Prefer the PNG crop when the glow matters. |
+| `og.png` | 1280×640 social preview (hero crop). |
+| `favicon.ico` / `favicon-32.png` / `favicon-16.png` | Favicons from the mark crop. |
 | `apple-touch-icon.png` | 180×180. |
 | `icon-192.png` / `icon-512.png` | PWA / app icons. |
+| `crew/echo.png` … `knot.png` | Portraits cropped from the hero, padded to 280×360. |
 
 ## Palette
 
-Sampled from the official mark and hero — not a second invented system.
+Sampled from the hero mark — not a second invented system.
 
 | Token | Hex | Use |
 | --- | --- | --- |
-| Night | `#0B1220` | Canvas, mark tile |
-| Ink | `#000002` | Hero void |
-| Signal | `#4DC9FF` | Glow, eyes, tiles |
-| Mark blue | `#0AA0E2` | Color version of the S (Canva brand kit) |
-| Ember | `#F96A02` | Orange square |
-| Paper | `#F7FBFF` | Wordmark, white S |
+| Void | `#000004` | Hero canvas, mark tile |
+| Night | `#0B1220` | UI chrome |
+| Signal | `#12D6E8` | Glow, eyes, tiles |
+| Ember | `#F85720` | Orange square |
+| Paper | `#F4FFFF` | Bars, wordmark |
 
 ## Wordmark
 
@@ -39,11 +42,11 @@ Fresh sources. Lasting memory.
 
 ## Crew (canonical)
 
-1. **Echo** — Communicator
-2. **Shelf** — Memory archivist
-3. **Lore** — Core guardian (center)
-4. **Scout** — Source hunter
-5. **Knot** — Linker
+1. **Echo** — Communicator (chatty / wave)
+2. **Shelf** — Memory archivist (careful stack)
+3. **Lore** — Core guardian (calm core)
+4. **Scout** — Source hunter (curious seek)
+5. **Knot** — Linker (wink / link)
 
 ## GitHub social preview
 

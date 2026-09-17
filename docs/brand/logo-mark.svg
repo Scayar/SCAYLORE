@@ -1,11 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="SCAYLORE mark">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="SCAYLORE mark">
   <title>SCAYLORE</title>
-  <rect width="512" height="512" rx="96" fill="#0B1220"/>
-  <!-- Paths traced from the official mark PNG (two-bar S + orange square). -->
-  <g transform="translate(0,512) scale(0.1,-0.1)" fill="#F7FBFF" stroke="none">
-    <path d="M1485 4098 c-190 -35 -380 -131 -523 -262 -115 -105 -228 -299 -274 -466 -20 -73 -23 -108 -23 -255 0 -201 12 -258 86 -412 113 -236 313 -402 584 -486 70 -21 77 -22 1140 -27 1019 -5 1072 -6 1105 -24 87 -46 124 -103 123 -194 -1 -85 -37 -145 -112 -184 l-53 -28 -1179 0 c-834 0 -1193 -3 -1231 -11 -119 -25 -219 -106 -272 -219 -27 -57 -31 -75 -31 -155 0 -80 3 -97 31 -155 41 -84 101 -145 183 -184 l66 -31 1240 -3 c823 -2 1260 1 1301 8 349 59 655 329 767 675 42 130 51 192 50 335 -1 111 -5 152 -26 233 -87 332 -306 565 -622 664 l-90 28 -1076 5 -1076 5 -48 30 c-69 43 -98 100 -93 182 5 77 41 135 107 170 l44 23 726 0 c399 0 751 4 782 9 123 20 217 92 270 206 97 206 1 450 -205 519 -44 14 -131 16 -835 15 -441 -1 -808 -5 -836 -11z"/>
-  </g>
-  <g transform="translate(0,512) scale(0.1,-0.1)" fill="#F96A02" stroke="none">
-    <path d="M3838 4106 c-64 -17 -94 -39 -119 -88 -20 -39 -21 -58 -23 -277 -1 -235 -1 -236 24 -281 17 -29 41 -53 70 -70 45 -25 47 -25 290 -25 l245 0 48 28 c82 49 87 67 87 343 0 221 -1 241 -21 281 -15 30 -35 52 -67 71 l-47 27 -220 2 c-149 1 -235 -3 -267 -11z"/>
+  <desc>Vector companion of the mark cropped from the brand hero: two horizontal rounded bars plus a small orange square. Prefer the PNG crop when fidelity matters.</desc>
+  <rect width="256" height="256" rx="48" fill="#000004"/>
+  <g>
+    <rect x="40" y="68" width="148" height="42" rx="21" fill="#7EFFF8" opacity="0.22"/>
+    <rect x="40" y="146" width="148" height="42" rx="21" fill="#7EFFF8" opacity="0.22"/>
+    <rect x="44" y="72" width="140" height="34" rx="17" fill="#F4FFFF"/>
+    <rect x="44" y="150" width="140" height="34" rx="17" fill="#F4FFFF"/>
+    <rect x="194" y="76" width="22" height="22" rx="3" fill="#F85720"/>
   </g>
 </svg>
