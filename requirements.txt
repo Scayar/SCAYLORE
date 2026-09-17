@@ -1,0 +1,2 @@
+# Brand asset tooling only. This repository has no application runtime.
+Pillow>=10.0.0

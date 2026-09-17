@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SCAYLORE — Fresh sources. Lasting memory.</title>
+  <meta name="description" content="SCAYLORE brand home. Fresh sources. Lasting memory. Meet Echo, Shelf, Lore, Scout, and Knot." />
+  <meta property="og:title" content="SCAYLORE" />
+  <meta property="og:description" content="Fresh sources. Lasting memory." />
+  <meta property="og:image" content="./social-preview.png" />
+  <link rel="icon" href="./favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+  <link rel="stylesheet" href="./tokens.css" />
+  <style>
+    html, body {
+      margin: 0;
+      background: var(--scaylore-void);
+      color: var(--scaylore-ink);
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+    }
+    body {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+    header, section { text-align: center; }
+    .lockup { width: min(560px, 92vw); height: auto; }
+    .hero { width: min(960px, 100%); height: auto; margin: 28px 0 8px; border-radius: 16px; }
+    .tag { color: var(--scaylore-mute); letter-spacing: 0.04em; }
+    h1 { font-size: 0; height: 0; overflow: hidden; }
+    h2 { font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.78rem; color: var(--scaylore-cyan); }
+    p { line-height: 1.55; color: #d5e6ee; }
+    .crew {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 28px;
+    }
+    figure { margin: 0; }
+    figure img {
+      width: 100%;
+      aspect-ratio: 7 / 9;
+      object-fit: cover;
+      object-position: center bottom;
+      border-radius: 12px;
+      background: #05080f;
+    }
+    figcaption { margin-top: 8px; font-size: 0.92rem; }
+    figcaption strong { display: block; }
+    figcaption span { color: var(--scaylore-mute); font-size: 0.8rem; }
+    .swatches { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin: 18px 0 0; }
+    .swatch {
+      width: 72px; height: 72px; border-radius: 12px;
+      display: grid; place-items: end start; padding: 8px; box-sizing: border-box;
+      font-size: 0.68rem; letter-spacing: 0.02em;
+    }
+    @media (max-width: 800px) {
+      .crew { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SCAYLORE</h1>
+    <img class="lockup" src="./scaylore-lockup.png" alt="SCAYLORE — Fresh sources. Lasting memory." />
+    <p class="tag">Brand board · not a product runtime</p>
+  </header>
+
+  <section>
+    <img class="hero" src="./scaylore-heroes.png" alt="Echo, Shelf, Lore, Scout, and Knot standing under the SCAYLORE mark" />
+  </section>
+
+  <section>
+    <h2>Meet the crew</h2>
+    <div class="crew">
+      <figure>
+        <img src="./crew/echo.png" alt="Echo" />
+        <figcaption><strong>Echo</strong><span>Communicator</span></figcaption>
+      </figure>
+      <figure>
+        <img src="./crew/shelf.png" alt="Shelf" />
+        <figcaption><strong>Shelf</strong><span>Memory archivist</span></figcaption>
+      </figure>
+      <figure>
+        <img src="./crew/lore.png" alt="Lore" />
+        <figcaption><strong>Lore</strong><span>Core guardian</span></figcaption>
+      </figure>
+      <figure>
+        <img src="./crew/scout.png" alt="Scout" />
+        <figcaption><strong>Scout</strong><span>Source hunter</span></figcaption>
+      </figure>
+      <figure>
+        <img src="./crew/knot.png" alt="Knot" />
+        <figcaption><strong>Knot</strong><span>Linker</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>Palette</h2>
+    <div class="swatches">
+      <div class="swatch" style="background:#070b14;border:1px solid #1b2836;color:#9ec4d6">Void</div>
+      <div class="swatch" style="background:#f7fefe;color:#070b14">Snow</div>
+      <div class="swatch" style="background:#12d6e8;color:#070b14">Cyan</div>
+      <div class="swatch" style="background:#fd6a45;color:#070b14">Orange</div>
+      <div class="swatch" style="background:#9ec4d6;color:#070b14">Mute</div>
+    </div>
+  </section>
+</body>
+</html>
