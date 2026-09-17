@@ -258,8 +258,20 @@ def main() -> None:
     }
     crew_dir = BRAND / "crew"
     crew_dir.mkdir(exist_ok=True)
+    canvas_w, canvas_h = 280, 360
     for name, box in portraits.items():
-        save_rgb(hero.crop(box), crew_dir / f"{name}.png")
+        crop = hero.crop(box).convert("RGBA")
+        tile = Image.new("RGBA", (canvas_w, canvas_h), VOID)
+        # Fit height, keep the robot grounded.
+        ratio = min((canvas_w - 16) / crop.width, (canvas_h - 16) / crop.height)
+        fitted = crop.resize(
+            (max(1, int(crop.width * ratio)), max(1, int(crop.height * ratio))),
+            Image.Resampling.LANCZOS,
+        )
+        x = (canvas_w - fitted.width) // 2
+        y = canvas_h - fitted.height - 8
+        tile.alpha_composite(fitted, (x, y))
+        save_rgb(tile, crew_dir / f"{name}.png")
 
     print("wrote:")
     for p in sorted(BRAND.rglob("*")):

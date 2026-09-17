@@ -19,11 +19,11 @@ REQUIRED = {
     "docs/brand/scaylore-lockup.png": (800, 200),
     "docs/brand/favicon.png": (32, 32),
     "docs/brand/social-preview.png": (1280, 640),
-    "docs/brand/crew/echo.png": (150, 250),
-    "docs/brand/crew/shelf.png": (140, 250),
-    "docs/brand/crew/lore.png": (140, 250),
-    "docs/brand/crew/scout.png": (140, 250),
-    "docs/brand/crew/knot.png": (140, 250),
+    "docs/brand/crew/echo.png": (260, 340),
+    "docs/brand/crew/shelf.png": (260, 340),
+    "docs/brand/crew/lore.png": (260, 340),
+    "docs/brand/crew/scout.png": (260, 340),
+    "docs/brand/crew/knot.png": (260, 340),
 }
 
 CREW = ("Echo", "Shelf", "Lore", "Scout", "Knot")
