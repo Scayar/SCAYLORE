@@ -104,10 +104,11 @@
         padding: 16px 18px;
       }
       article img {
-        width: 100%;
+        width: min(100%, 280px);
+        height: auto;
         border-radius: 10px;
         display: block;
-        margin-bottom: 12px;
+        margin: 0 auto 12px;
         background: #000004;
       }
       article h3 {
@@ -139,8 +140,10 @@
         .crew {
           grid-template-columns: 1fr 1fr;
         }
-        .crew article:nth-child(3) {
-          grid-column: 1 / -1;
+      }
+      @media (min-width: 960px) {
+        .crew {
+          grid-template-columns: repeat(5, 1fr);
         }
       }
     </style>
