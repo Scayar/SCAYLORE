@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SCAYLORE — Fresh sources. Lasting memory.</title>
+    <meta
+      name="description"
+      content="SCAYLORE is Scayar’s brand home for a simple promise: keep the sources fresh, and keep the memory lasting. Meet Echo, Shelf, Lore, Scout, and Knot."
+    />
+    <meta property="og:title" content="SCAYLORE — Fresh sources. Lasting memory." />
+    <meta
+      property="og:description"
+      content="Brand home for the SCAYLORE mark and crew. No app to install in this repository yet."
+    />
+    <meta property="og:image" content="brand/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="brand/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="brand/favicon-32.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="brand/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --night: #0b1220;
+        --ink: #05070c;
+        --paper: #f7fbff;
+        --mute: #9bb0c4;
+        --signal: #4dc9ff;
+        --ember: #f96a02;
+        --card: #121a28;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--ink);
+        color: var(--paper);
+        font-family: "IBM Plex Sans", system-ui, sans-serif;
+      }
+      body {
+        line-height: 1.55;
+      }
+      header,
+      main,
+      footer {
+        width: min(980px, calc(100% - 32px));
+        margin-inline: auto;
+      }
+      header {
+        padding: 40px 0 16px;
+        text-align: center;
+      }
+      .mark {
+        width: 88px;
+        height: 88px;
+        border-radius: 22px;
+      }
+      h1 {
+        font-family: Outfit, sans-serif;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        font-size: clamp(1.6rem, 4vw, 2.4rem);
+        margin: 18px 0 8px;
+      }
+      .tag {
+        color: var(--mute);
+        margin: 0;
+        font-size: 1.05rem;
+      }
+      .hero {
+        width: 100%;
+        border-radius: 18px;
+        display: block;
+        margin: 28px auto 40px;
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+      }
+      h2 {
+        font-family: Outfit, sans-serif;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        font-size: 1.15rem;
+        margin: 36px 0 12px;
+      }
+      p {
+        color: #d5e2ee;
+      }
+      .lede {
+        max-width: 640px;
+        margin: 0 auto 8px;
+        text-align: center;
+        color: #c5d4e2;
+      }
+      .crew {
+        display: grid;
+        gap: 14px;
+        margin: 20px 0 40px;
+      }
+      article {
+        background: var(--card);
+        border: 1px solid #1d2a3c;
+        border-radius: 14px;
+        padding: 16px 18px;
+      }
+      article h3 {
+        font-family: Outfit, sans-serif;
+        margin: 0 0 6px;
+        font-size: 1.05rem;
+      }
+      article .role {
+        color: var(--signal);
+        font-size: 0.86rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+      .note {
+        border-left: 3px solid var(--ember);
+        padding-left: 14px;
+        color: var(--mute);
+      }
+      a {
+        color: var(--signal);
+      }
+      footer {
+        padding: 24px 0 48px;
+        color: var(--mute);
+        font-size: 0.9rem;
+        text-align: center;
+      }
+      @media (min-width: 720px) {
+        .crew {
+          grid-template-columns: 1fr 1fr;
+        }
+        .crew article:nth-child(3) {
+          grid-column: 1 / -1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img class="mark" src="brand/logo-mark-tight.png" alt="SCAYLORE mark" width="88" height="88" />
+      <h1>SCAYLORE</h1>
+      <p class="tag">Fresh sources. Lasting memory.</p>
+    </header>
+    <main>
+      <img
+        class="hero"
+        src="brand/scaylore-heroes.png"
+        alt="The SCAYLORE crew: Echo, Shelf, Lore, Scout, and Knot"
+        width="1280"
+        height="720"
+      />
+      <p class="lede">
+        SCAYLORE is Scayar’s brand home for a simple promise: keep the sources
+        fresh, and keep the memory lasting. This page is identity, not a product
+        demo — there is no app to install in this repository yet.
+      </p>
+
+      <h2>Meet the crew</h2>
+      <div class="crew">
+        <article>
+          <div class="role">Communicator</div>
+          <h3>Echo</h3>
+          <p>
+            Antennae with blue tips, a wave, three chat tiles already in the air.
+            Echo brings fresh signals and conversations into the system.
+          </p>
+        </article>
+        <article>
+          <div class="role">Memory archivist</div>
+          <h3>Shelf</h3>
+          <p>
+            A stack of three glowing slabs. Shelf organizes and stacks lasting
+            memory so it can be found again.
+          </p>
+        </article>
+        <article>
+          <div class="role">Core guardian</div>
+          <h3>Lore</h3>
+          <p>
+            Center. Eyes closed, a cube holding the S-mark. Lore is the living
+            lore — the lasting memory core.
+          </p>
+        </article>
+        <article>
+          <div class="role">Source hunter</div>
+          <h3>Scout</h3>
+          <p>
+            Magnifying glass, wide curious eyes. Scout finds and validates fresh
+            sources.
+          </p>
+        </article>
+        <article>
+          <div class="role">Linker</div>
+          <h3>Knot</h3>
+          <p>
+            A wink and a chain. Knot connects sources, memory, and people.
+          </p>
+        </article>
+      </div>
+
+      <p class="note">
+        Brand files live in
+        <a href="https://github.com/Scayar/SCAYLORE">the SCAYLORE repository</a>.
+        Run <code>python3 scripts/check-brand.py</code> to verify them.
+      </p>
+    </main>
+    <footer>Made by Scayar · Fresh sources. Lasting memory.</footer>
+  </body>
+</html>
