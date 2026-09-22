@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="SCAYLORE mark">
+  <title>SCAYLORE</title>
+  <desc>Vector companion of the mark cropped from the brand hero: two horizontal rounded bars plus a small orange square. Prefer the PNG crop when fidelity matters.</desc>
+  <rect width="256" height="256" rx="48" fill="#000004"/>
+  <g>
+    <rect x="40" y="68" width="148" height="42" rx="21" fill="#7EFFF8" opacity="0.22"/>
+    <rect x="40" y="146" width="148" height="42" rx="21" fill="#7EFFF8" opacity="0.22"/>
+    <rect x="44" y="72" width="140" height="34" rx="17" fill="#F4FFFF"/>
+    <rect x="44" y="150" width="140" height="34" rx="17" fill="#F4FFFF"/>
+    <rect x="194" y="76" width="22" height="22" rx="3" fill="#F85720"/>
+  </g>
+</svg>
